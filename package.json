@@ -1,0 +1,23 @@
+{
+  "name": "reduxefy-toolkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AneesMuzzafer/reduxefy-toolkit.git"
+  },
+  "author": "Anees Muzzafer Shah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AneesMuzzafer/reduxefy-toolkit/issues"
+  },
+  "homepage": "https://github.com/AneesMuzzafer/reduxefy-toolkit#readme",
+  "dependencies": {
+    "immer": "^9.0.19",
+    "reduxefy": "^0.0.1"
+  }
+}
