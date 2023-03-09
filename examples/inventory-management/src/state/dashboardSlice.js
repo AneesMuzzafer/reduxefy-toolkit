@@ -34,7 +34,7 @@ const dashboardSlice = createSlice({
             state.data = action.payload;
         })
 
-        builder.addCase(Dashboard.getDashboardData, (state, action) => {
+        builder.addCase(Dashboard.getDashboardData.rejected, (state, action) => {
             state.loading = false;
             state.error = action.payload;
         })
