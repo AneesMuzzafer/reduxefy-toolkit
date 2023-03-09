@@ -38,6 +38,13 @@ const SignIn = () => {
         }
     }, [state.error])
 
+    const handleSignIn = () => {
+        if(!email || !password) {
+            return;
+        }
+        dispatch(Profile.signIn({ email, password }));
+    }
+
     return (
         <div className="bg-indigo-50 min-h-screen flex justify-center items-center">
             <div  className="bg-white p-10 rounded-xl flex flex-col gap-6">
@@ -49,14 +56,14 @@ const SignIn = () => {
                 </div>
                 <div>
                     <Label className="text-slate-600 flex-row-reverse">Email</Label>
-                    <InputShadow onKeyUp={(e) => {e.key === "Enter" && dispatch(Profile.signIn({ email, password }))}} placeholder="email" value={email} onChange={e => setEmail(e.target.value)} />
+                    <InputShadow onKeyUp={(e) => {e.key === "Enter" && handleSignIn()}} placeholder="email" value={email} onChange={e => setEmail(e.target.value)} />
                 </div>
                 <div>
                     <Label className="text-slate-600 flex-row-reverse">Password</Label>
-                    <InputShadow onKeyUp={(e) => {e.key === "Enter" && dispatch(Profile.signIn({ email, password }))}} placeholder="password" value={password} type="password" onChange={e => setPassword(e.target.value)} />
+                    <InputShadow onKeyUp={(e) => {e.key === "Enter" && handleSignIn()}} placeholder="password" value={password} type="password" onChange={e => setPassword(e.target.value)} />
                 </div>
                 <div className="relative">
-                    <ButtonPrimary label={state.loading ? <Icon icon="eos-icons:loading" width={20} /> : "Sign In"} className="w-full mt-6" onClick={() => dispatch(Profile.signIn({ email, password }))} />
+                    <ButtonPrimary label={state.loading ? <Icon icon="eos-icons:loading" width={20} /> : "Sign In"} className="w-full mt-6" onClick={handleSignIn} />
                     {
                         state.error &&
                         <div className="text-red-600 flex justify-center absolute bottom-12 left-0 w-full">
