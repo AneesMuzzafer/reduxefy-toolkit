@@ -21,11 +21,18 @@ export const createAsyncThunk = (name, asyncFn) => {
             dispatch({ type: action[name].pending, payload: undefined, meta: { args: data } });
             let response;
             try {
+                let rejectedWithValue = false;
                 response = await asyncFn(data, {
                     dispatch,
-                    getState
+                    getState,
+                    rejectWithValue: (val) => {
+                        rejectedWithValue = true;
+                        dispatch({ type: action[name].rejected, payload: val, meta: { args: data } });
+                    }
                 });
-                dispatch({ type: action[name].fulfilled, payload: response, meta: { args: data } });
+                if(!rejectedWithValue) {
+                    dispatch({ type: action[name].fulfilled, payload: response, meta: { args: data } });
+                }
             } catch (e) {
                 response = e;
                 dispatch({ type: action[name].rejected, payload: e, meta: { args: data } })

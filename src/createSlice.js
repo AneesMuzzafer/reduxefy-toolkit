@@ -12,7 +12,7 @@ import produce from "immer";
 
 export const createSlice = (sliceObject) => {
     const name = sliceObject.name;
-    const intialState = sliceObject.intialState;
+    const initialState = sliceObject.initialState;
 
     const actions = {};
     const reducers = {};
@@ -27,7 +27,7 @@ export const createSlice = (sliceObject) => {
         }
     });
 
-    const reducer = (state = intialState, actionObject) => {
+    const reducer = (state = initialState, actionObject) => {
         state = produce(state, (draft) => {
             if (reducers[actionObject.type]) {
                 reducers[actionObject.type](draft, actionObject);
