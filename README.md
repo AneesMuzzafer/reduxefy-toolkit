@@ -4,12 +4,16 @@
 
 Reduxefy Toolkit is actually built on top of [Reduxefy](https://github.com/AneesMuzzafer/reduxefy) and its close ally - [React-Reduxefy](https://github.com/AneesMuzzafer/react-reduxefy). So, if you want to join the party, be sure to check out these two hip cats first. They're like the cool kids at the playground that Reduxefy Toolkit looks up to.
 
+## Demo
+
+With Reduxefy Toolkit, you can easily build complex applications. There's actually a working demo of an [Inventory management system](#) built using **Reduxefy Toolkit** and **React Reduxefy**. It's like a fully stocked fridge waiting for you to raid it
+
 ## Installation
 
 To get started with Reduxefy Toolkit, you can easily install it via npm by running:
 
 ```bash
-	npm install reduxefy-toolkit
+npm install reduxefy-toolkit
 ```
 
 ## Usage
@@ -160,11 +164,10 @@ export default {
 };
 ```
 
-With Reduxefy Toolkit, you can easily build complex applications. There's actually a working demo of an [Inventory management system](#) built using **Reduxefy Toolkit** and **React Reduxefy**. It's like a fully stocked fridge waiting for you to raid it
 
 ## License
 
-[MIT]
+[MIT](#)
 
 
 Ready to level up your state management game? Give Reduxefy Toolkit a spin and watch your app go from 🐢 to 🚀!
