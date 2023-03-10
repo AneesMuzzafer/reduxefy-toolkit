@@ -6,7 +6,7 @@ Reduxefy Toolkit is actually built on top of [Reduxefy](https://github.com/Anees
 
 ## Demo
 
-With Reduxefy Toolkit, you can easily build complex applications. There's actually a working demo of an [Inventory management system](#) built using **Reduxefy Toolkit** and **React Reduxefy**. It's like a fully stocked fridge waiting for you to raid it
+With Reduxefy Toolkit, you can easily build complex applications. There's actually a working demo of an [Inventory management system](https://aneesmuzzafer.github.io/inventory-management-reduxefy-demo/) built using **Reduxefy Toolkit** and **React Reduxefy**. It's like a fully stocked fridge waiting for you to raid it.
 
 ## Installation
 
@@ -21,7 +21,9 @@ npm install reduxefy-toolkit
 Once installed, you can start using the toolkit by importing one of its three main functions:
 
 > configureStore
+>
 > createSlice
+>
 > createAsyncThunk
 
 
